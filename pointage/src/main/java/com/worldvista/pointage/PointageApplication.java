@@ -19,8 +19,5 @@ public class PointageApplication {
     public RestTemplate restTemplate() {
         return new RestTemplate();
     }
-//     @Bean
-//     KeycloakSpringBootConfigResolver configResolver(){
-//        return new KeycloakSpringBootConfigResolver();
-//    }
+
 }

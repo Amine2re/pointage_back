@@ -21,8 +21,6 @@ public class KeycloakLogoutHandler implements LogoutHandler {
     @Autowired
     private  RestTemplate restTemplate;
 
-
-
     @Override
     public void logout(HttpServletRequest request, HttpServletResponse response,
                        Authentication auth) {
