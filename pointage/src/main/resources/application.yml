@@ -1,0 +1,81 @@
+server:
+  port: 8087
+
+spring:
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+#      ddl-auto: create-drop
+      ddl-auto: none
+#      ddl-auto: update
+  datasource:
+    url: jdbc:postgresql://localhost:5432/keycloack_db
+    username: lallana2re
+    password: Mouhamed1995@@
+    driver-class-name: org.postgresql.Driver
+
+  security:
+    oauth2:
+      client:
+        provider:
+          oidc:
+            issuer-uri: http://localhost:8080/auth/realms/worldvistaRealm
+        registration:
+          oidc:
+            client-id: pointageBack
+            client-secret: 1I9rLrVUP0W2LlcC0iRLsS4m7co9cKlr
+            scope: profile, email # last one for refresh tokens
+#  security:
+#    oauth2:
+#      client:
+#        registration:
+#          oidc:
+#            client-id: pointageBack
+#            authorization-grant-type: authorization_code
+#            scope: openid
+#        provider:
+#          oidc:
+#            issuer-uri: http://localhost:8080/auth/realms/worldvistaRealm
+#            user-name-attribute: lallana2re
+
+
+#keycloak:
+#  realm: worldvistaRealm
+#  auth-server-url: http://localhost:8080/auth/
+#  resource: pointageBack
+#  public-client: true
+#  enabled: true
+#    bearer-only: true
+
+#twillio:
+#  password_twillio: 9287750d3cec5a0dc05eca17d0adeb97
+#  username_twillio: AC50bc045310c6fb83567743cfaed00882
+#  number_from_Twillio: +221782305607
+#  security:
+#    oauth2:
+#      resouceserver:
+#        jwt:
+#          issuer-uri: http://localhost:8080/auth/realms/worldvistaRealm
+#          jwk_set_uri: http://localhost:8080/auth/realms/worldvistaRealm/protocol/openid-connect/certs
+#      client:
+#        registration:
+#          keycloak:
+#            client-id: pointageBack
+#            authorization-grant-type: authorization_code
+#            scope: openid
+#
+#
+#        provider:
+#          keycloack:
+#            issuer-uri: http://localhost:8080/auth/realms/worldvistaRealm
+#            user-name-attribute: lallana2re
+#            account-service: http://localhost:8082/auth/realms/pointageKeycloack/account
+#            realm: pointageKeycloack
+#            public-key: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjOTFuAKWAGq6wjs5133PPgTSJOpYedRD3ifZLyrjf5qW+8WLWMlJyHFgUWBngBI/FNqltBw0BZ9EjCOQnVJGvsH/r7biy2sAw9vGrskbO+MdShiAaqsb1aen2lNtnu/hQSOv4KzJnFHZcm4d09sY+sm2Ls6DMXihyXtj8EgUkK5PXTZEaC4SLScFlPSLRluTttwq7yVyI6aDgRyZDsG1R/IFu0Td/SqmeI58GFFPhpOMdhf7C4SD1FoNz8a0CGeymJdwhpzttG2V/18Neqt0cjF8ZDyRsEArzP4zupbn3ChykRqa/a0eNGrPms9zj+QEhwfeusQysUcbaWlDFJn8zwIDAQAB
+
+#  spring.security.oauth2.client.provider.keycloak.issuer-uri=http://localhost:8180/auth/realms/SpringBootKeycloak
+#  spring.security.oauth2.client.provider.keycloak.user-name-attribute=preferred_username
+#    spring.security.oauth2.client.registration.keycloak.client-id=login-app
+#    spring.security.oauth2.client.registration.keycloak.authorization-grant-type=authorization_code
+#    spring.security.oauth2.client.registration.keycloak.scope=openid
